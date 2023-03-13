@@ -40,8 +40,11 @@ function pick() {
     let val = document.getElementById("inputName").value;
     let splice = document.getElementById("splice").value;
     let result = val.split(/\r?\n/).filter(element => element);
+    //acak
     let rand = shuffle(result);
-    let splite = splitIntoChunk(rand, splice);
+    let divide = Math.ceil(rand.length / splice);
+    //pisah
+    let splite = splitIntoChunk(rand, divide);
     let print = '';
     splite.forEach(function (item, index) {
         // console.log(item, index);
