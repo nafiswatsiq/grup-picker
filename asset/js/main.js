@@ -46,13 +46,19 @@ function pick() {
     //pisah
     let splite = splitIntoChunk(rand, divide);
     let print = '';
+    let num = 1;
     splite.forEach(function (item, index) {
         // console.log(item, index);
         let list = '';
         for (let i = 0; i < item.length; i++) {
             list += `<li> ${item[i]} </li>`;
         }
-        print += `<ul>${list}</ul>`;
+        print += `
+        <div>
+            <p>Kelompok ${num++}</p>
+            <ul>${list}</ul>
+        </div>
+        `;
     });
     document.getElementById("result").innerHTML = print;
 }

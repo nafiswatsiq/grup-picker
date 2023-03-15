@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    .list-box{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
     ul li {
       list-style: decimal;
     }
@@ -18,7 +22,7 @@
   <input type="number" id="splice">
   <button onclick="pick()">Try it</button>
 
-  <div id="result"></div>
+  <div id="result" class="list-box"></div>
 
   <script src="./asset/js/main.js"></script>
 </body>
